@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запис онлайн клієнтів</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Запис онлайн клієнтів</h1>
+        <form id="appointmentForm">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="instagram">Instagram:</label>
+            <input type="text" id="instagram" name="instagram" input>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <fieldset>
+                <legend>Оберіть бажану послугу:</legend>
+                
+                <label>
+                    <input type="radio" name="service" value="Зняття + Чистка + Укріплення з покриттям гель паком/кольоровою базою/гелем" required>
+                    Зняття + Чистка + Укріплення з покриттям гель паком/кольоровою базою/гелем
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="service" value="Нарощення" required>
+                    Нарощення
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="service" value="Зняття попереднього покриття + Чистка без подальшого покриття" required>
+                    Зняття попереднього покриття + Чистка без подальшого покриття
+                </label>
+            </fieldset>
+
+            <label for="city">Місто:</label>
+            <select id="city" name="city" onchange="updateTimes()">
+                <option value="">Оберіть місто</option>
+                <option value="м. Новояворівськ">м. Новояворівськ</option>
+                <option value="м. Івано-франкове (Янів)">м. Івано-франкове (Янів)</option>
+            </select>
+
+            <label for="date">Дата запису:</label>
+            <select id="date" name="date" required></select>
+           
+
+            <label for="time">Час запису:</label>
+            <select id="time" name="time" required></select>
+        
+
+            <button type="submit">Записатися</button>
+        </form>
+
+        <div id="successMessage" class="hidden">
+            Дякуємо за запис! Ми зв'яжемося з вами найближчим часом. ❤️
+        </div>        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

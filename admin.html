@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адміністративний інтерфейс</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Налаштування доступних дат і часу для запису</h1>
+        <form id="settingsForm">
+            <fieldset>
+                <legend>Оберіть місто для налаштування:</legend>
+                <select id="citySelect">
+                    <option value="Novoyavorivsk">Новояворівськ</option>
+                    <option value="Yaniv">Янів</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Налаштування дат для обраного міста:</legend>
+                <input type="date" id="dateForCity">
+                <button type="button" onclick="addDateForCity()">Додати дату для міста</button>
+                <ul id="dateListForCity"></ul>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Налаштування годин для обраного міста:</legend>
+                <input type="time" id="timeForCity">
+                <button type="button" onclick="addTimeForCity()">Додати час для міста</button>
+                <ul id="timeListForCity"></ul>
+            </fieldset>
+
+            <button type="submit">Зберегти налаштування</button>
+        </form>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
